@@ -34,10 +34,25 @@ veggy <- cabbages
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+basicCN <- ggplot(veggy,aes(x=Cult,y=VitC))
+```
+## Now add in boxplot
 
+```{r}
+basicCN + geom_boxplot()
+```
+  
+  The boxplot shows that C52 gets more vitamin C than C52.
+  
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+favstats(VitC~Cult,data=veggy)
+```
+
+The table shows that the average of C52 is 64.4, and the average of C39 is 51.0.
 
 ## Inferential Results
 
